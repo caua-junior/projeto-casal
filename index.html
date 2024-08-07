@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namora cmg?</title>
+    <style>
+        div#container {
+            background: url(imagens/pexels-karolina-grabowska-4226765.jpg);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        .loved-by-the-king-regular {
+  font-family: "Loved by the King", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        h1 {
+           color: firebrick;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0.725);
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            width: 60px;
+        }
+        button:hover {
+            transition: 0.5s;
+            background-color: violet;
+            color: rgb(58, 255, 58);
+            padding: 11px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 class="loved-by-the-king-regular">Namora comigo?</h1>
+        <button onclick="sim()">SIM</button>
+        <button onmouseover="desvia(this)">NAO</button>
+    </div>
+</body>
+<script>
+    function sim(){
+         alert("teamo! :)")
+    }
+
+    function desvia(t){
+        var btn = t;
+        btn.style.position = 'absolute'
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log("opa desviei...");
+    }
+
+    function geraPosicao(min,max){
+        return (Math.random() * (max - min) + min) + "%";
+    }
+</script>
+</html>
